@@ -6,7 +6,7 @@ import { BsHandThumbsUp,BsHandThumbsDown } from "react-icons/bs";
 const Comment = ({name,time,comment,likes}) => {
   return (
    
-    <div className="flex items-center ml-20">
+    <div className="flex items-center">
       <VscAccount size={40}/>
       <div className="ml-3 mt-5">
         <span className='font-semibold'>{name}</span><span className='text-slate-700 ml-2 text-sm'>{time}</span>

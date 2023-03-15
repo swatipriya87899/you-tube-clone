@@ -1,25 +1,20 @@
-import React, { useEffect,useState } from 'react'
-import { YOUTUBE_VIDEOS_API } from '../utils/Constant';
-import {datas} from '../utils/VideoData'
-import VideoCard from '../VideoCard';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { YOUTUBE_VIDEOS_API } from "../utils/Constant";
+import { datas } from "../VideoData";
+import VideoCard from "./VideoCard";
 
 const VideoCardList = () => {
-  // const [data, setData] = useState([])
-  // useEffect(()=>{
-  //   getData();
-  // },[])
-
-  // const getData= async()=>{
-  //   const datas=await fetch(YOUTUBE_VIDEOS_API);
-  //   const json=await datas.json();
-  //  setData(json.items)
-  // }
-  const data=datas.items
+  const data = datas.items;
   return (
-    <div className='flex flex-wrap justify-center'>
-      {data.map((item)=><div><VideoCard item={item}></VideoCard></div>)}
+    <div className="flex flex-wrap">
+      {data.map((item) => (
+        <Link to={"/watch?v="+item.id}>
+          <VideoCard item={item}></VideoCard>
+        </Link>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default VideoCardList
+export default VideoCardList;

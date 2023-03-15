@@ -5,7 +5,7 @@ import VideoCardList from "./VideoCardList";
 const MainContainer = () => {
   return (
     <div className="col-span-8">
-      <ButtonGroup></ButtonGroup>
+      <div className="bg-white"><ButtonGroup></ButtonGroup></div>
       <VideoCardList></VideoCardList>
     </div>
   );

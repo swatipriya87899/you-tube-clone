@@ -8,7 +8,7 @@ const appSlice=createSlice({
     reducers:{
         toggleMenu:(state)=>{
             state.showMenu=!state.showMenu
-        }
+        },
     }
 })
 
